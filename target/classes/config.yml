@@ -1,0 +1,16 @@
+uuid-spoof-fix: true
+uuid-spoofed: "&cSeems that your UUID is Spoofed! Maybe this is an error, please try to restart your client or change version!"
+no-permission: "&cYou don't have permission."
+usage-premium:
+  - "&c/premium <name> &7- Check if name is a locked premium"
+  - "&7(premiumlock.premium)"
+player:
+  not-locked: "&cThe player %name isn't locked"
+  locked: "&aThe player %name is locked"
+usage-lock:
+  - "&c/lock <name> [on/off] &7- Lock an account"
+  - "&7(premiumlock.lock)"
+protection:
+  add: "&aThe player %name is now protected"
+  remove: "&cThe player %name isn't now protected"
+  not: "&4The player isn't protected."
