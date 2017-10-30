@@ -33,7 +33,7 @@ public class ConnectionListener implements Listener {
     public void on(PreLoginEvent event) {
         PendingConnection connection = event.getConnection();
 
-        if (Config.PREMIUM.getConfig().getStringList(Consts.listLocked).contains(connection.getName())) {
+        if (Config.PREMIUM.getConfig().getStringList(Consts.listLocked).contains(connection.getName().toLowerCase())) {
             connection.setOnlineMode(true);
         }
     }
