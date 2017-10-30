@@ -48,3 +48,9 @@ Temporary Items
 .idea/artifacts/PremiumLock_jar.xml
 *.xml
 PremiumLock.iml
+target/classes/bungee.yml
+target/classes/config.yml
+target/classes/me/niketion/premiumlock/api/Consts.class
+target/classes/me/niketion/premiumlock/api/events/PremiumJoinEvent.class
+*.class
+target/classes/premium.yml

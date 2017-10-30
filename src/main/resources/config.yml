@@ -1,5 +1,4 @@
 uuid-spoof-fix: true
-uuid-spoofed: "&cSeems that your UUID is Spoofed! Maybe this is an error, please try to restart your client or change version!"
 no-permission: "&cYou don't have permission."
 usage-premium:
   - "&c/premium <name> &7- Check if name is a locked premium"
