@@ -16,6 +16,7 @@ import net.md_5.bungee.api.event.PreLoginEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.api.plugin.PluginManager;
 import net.md_5.bungee.event.EventHandler;
+import net.md_5.bungee.event.EventPriority;
 
 /**
  * @author Niketion
@@ -28,7 +29,7 @@ public class ConnectionListener implements Listener {
         this.pluginManager.registerListener(PremiumLock.getInstance(), this);
     }
 
-    @EventHandler(priority = 6)
+    @EventHandler(priority = EventPriority.LOWEST)
     public void on(PreLoginEvent event) {
         PendingConnection connection = event.getConnection();
 
@@ -37,14 +38,15 @@ public class ConnectionListener implements Listener {
         }
     }
 
-    @EventHandler
+    // Listen at lowest priority, prevents conflicts with plugins like LuckPerms.
+    @EventHandler(priority = EventPriority.LOWEST)
     public void on(LoginEvent event) {
         if (event.getConnection().isOnlineMode() && Config.MAIN.getConfig().getBoolean("uuid-spoof-fix"))
             PremiumLockApi.getInstance().setUUID(event.getConnection());
     }
 
     @EventHandler
-    public void on(PostLoginEvent event) throws NoSuchFieldException {
+    public void on(PostLoginEvent event) {
         ProxiedPlayer player = event.getPlayer();
 
         if (player.getPendingConnection().isOnlineMode())
