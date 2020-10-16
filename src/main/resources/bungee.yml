@@ -1,4 +1,4 @@
-author: Niketion
-version: 1.1
-main: me.niketion.premiumlock.PremiumLock
-name: PremiumLock
+name: ${project.name}
+version: ${project.version}
+main: ${project.groupId}.${project.artifactId}.${project.name}
+author: ${plugin.author}
